@@ -6,3 +6,10 @@ function getComputerChoice()
     else if (randNum > 2 / 3) return "scissors";
     else return "paper";
 }
+
+function getHumanChoice()
+{
+    choice = window.prompt("Choose: ").toLowerCase();
+    return choice;
+}
+
