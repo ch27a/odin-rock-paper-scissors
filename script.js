@@ -1,3 +1,14 @@
+function playGame()
+{
+    const rockButton = document.querySelector("#rock");
+    const paperButton = document.querySelector("#paper");
+    const scissorsButton = document.querySelector("#scissors");
+
+    rockButton.addEventListener("click", playRound("rock", getComputerChoice()))
+    paperButton.addEventListener("click", playRound("paper", getComputerChoice()))
+    scissorsButton.addEventListener("click", playRound("scissors", getComputerChoice()))
+}
+
 function getComputerChoice()
 {
     randNum = Math.random()
@@ -11,12 +22,6 @@ function getHumanChoice()
 {
     choice = window.prompt("Choose: ").toLowerCase();
     return choice;
-}
-
-function playGame()
-{
-    let humanScore = 0;
-    let computerScore = 0;
 }
 
 function playRound(humanChoice, computerChoice)
