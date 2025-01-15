@@ -1,21 +1,15 @@
 function getComputerChoice()
 {
-    randNum = Math.random()
+    const randNum = Math.random()
 
     if (randNum < 1 / 3) return "rock";
     else if (randNum > 2 / 3) return "scissors";
     else return "paper";
 }
 
-function getHumanChoice()
-{
-    choice = window.prompt("Choose: ").toLowerCase();
-    return choice;
-}
-
 function playRound(humanChoice, computerChoice)
 {
-    const result = document.querySelector(".results")
+    const result = document.querySelector("#results")
     
     if (humanChoice === computerChoice)
     {
@@ -57,6 +51,6 @@ const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
 
-rockButton.addEventListener("click", playRound("rock", getComputerChoice()))
-paperButton.addEventListener("click", playRound("paper", getComputerChoice()))
-scissorsButton.addEventListener("click", playRound("scissors", getComputerChoice()))
+rockButton.addEventListener("click", playRound("rock", getComputerChoice))
+paperButton.addEventListener("click", playRound("paper", getComputerChoice))
+scissorsButton.addEventListener("click", playRound("scissors", getComputerChoice))
