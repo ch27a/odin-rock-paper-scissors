@@ -17,22 +17,6 @@ function playGame()
 {
     let humanScore = 0;
     let computerScore = 0;
-
-    for (i = 0; i < 5; i++)
-    {
-        winner = playRound(getHumanChoice(), getComputerChoice());
-        if (winner === "computer")
-        {
-            computerScore++;
-        }
-        else if (winner === "human")
-        {
-            humanScore++;
-        }
-    }
-
-    console.log("Human score: " + humanScore);
-    console.log("Computer score: " + computerScore);
 }
 
 function playRound(humanChoice, computerChoice)
