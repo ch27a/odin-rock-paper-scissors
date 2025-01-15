@@ -7,9 +7,11 @@ function getComputerChoice()
     else return "paper";
 }
 
-function playRound(humanChoice, computerChoice)
+function playRound(event)
 {
-    const result = document.querySelector("#results")
+    const humanChoice = event.target.getAttribute("id");
+    const computerChoice = getComputerChoice();
+    const result = document.querySelector("#results");
     
     if (humanChoice === computerChoice)
     {
@@ -51,6 +53,6 @@ const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
 
-rockButton.addEventListener("click", playRound("rock", getComputerChoice))
-paperButton.addEventListener("click", playRound("paper", getComputerChoice))
-scissorsButton.addEventListener("click", playRound("scissors", getComputerChoice))
+rockButton.addEventListener("click", playRound);
+paperButton.addEventListener("click", playRound);
+scissorsButton.addEventListener("click", playRound);
